@@ -1,10 +1,21 @@
-// Learn more https://docs.expo.io/guides/customizing-metro
-const { getDefaultConfig } = require('expo/metro-config');
+// // Learn more https://docs.expo.io/guides/customizing-metro
+// const { getDefaultConfig } = require('expo/metro-config');
 
-/** @type {import('expo/metro-config').MetroConfig} */
+// /** @type {import('expo/metro-config').MetroConfig} */
+// const config = getDefaultConfig(__dirname, {
+//   // [Web-only]: Enables CSS support in Metro.
+//   isCSSEnabled: true,
+// });
+
+// module.exports = config;
+
+const { getDefaultConfig } = require("@expo/metro-config");
+
 const config = getDefaultConfig(__dirname, {
   // [Web-only]: Enables CSS support in Metro.
   isCSSEnabled: true,
 });
+
+config.resolver.sourceExts.push("cjs", "mjs");
 
 module.exports = config;
