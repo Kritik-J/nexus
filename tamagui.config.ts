@@ -1,5 +1,4 @@
 import { createAnimations } from "@tamagui/animations-react-native";
-import { createInterFont } from "@tamagui/font-inter";
 import { createMedia } from "@tamagui/react-native-media-driver";
 import { shorthands } from "@tamagui/shorthands";
 import { themes as _themes } from "@tamagui/themes";
@@ -7,6 +6,7 @@ import { createTamagui, createTheme } from "tamagui";
 import tokens from "./constants/tokens";
 import { darkTheme, lightTheme } from "./constants/themes";
 import { config as defaultConfig } from "@tamagui/config";
+import { interFont } from "./constants/font-inter";
 
 const animations = createAnimations({
   bouncy: { type: "spring", damping: 10, mass: 0.9, stiffness: 100 },
@@ -15,9 +15,6 @@ const animations = createAnimations({
 
   quick: { type: "spring", damping: 20, mass: 1.2, stiffness: 250 },
 });
-const headingFont = createInterFont();
-
-const bodyFont = createInterFont();
 
 const config = createTamagui({
   ...defaultConfig,
@@ -26,7 +23,7 @@ const config = createTamagui({
   shouldAddPrefersColorThemes: false,
   themeClassNameOnRoot: false,
   shorthands,
-  fonts: { heading: headingFont, body: bodyFont },
+  fonts: { body: interFont },
   themes: {
     light: {
       ..._themes.light,

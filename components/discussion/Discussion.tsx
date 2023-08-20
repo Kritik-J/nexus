@@ -1,10 +1,11 @@
 import React from "react";
-import { Avatar, H5, H6, Paragraph, Spacer, XStack, YStack } from "tamagui";
+import { Avatar, Spacer, XStack, YStack } from "tamagui";
 import { Pressable } from "react-native";
-import { Link, router } from "expo-router";
+import { router } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 import useTheme from "@/hooks/useTheme";
 import { numberToShortString } from "@/utils/transformation";
+import { StyledText } from "../styledtext";
 
 const Discussion = () => {
   const theme = useTheme();
@@ -29,12 +30,17 @@ const Discussion = () => {
 
           <YStack f={1}>
             <XStack justifyContent={"space-between"} alignItems={"center"}>
-              <Paragraph color={"$gray11"}>@username</Paragraph>
-              <Paragraph color={"$gray11"}>2 hours ago</Paragraph>
+              <StyledText fontSize={"$sm"} color={"$gray11"}>
+                @username
+              </StyledText>
+
+              <StyledText fontSize={"$sm"} color={"$gray11"}>
+                2 hours ago
+              </StyledText>
             </XStack>
             <Spacer size={"$2"} />
 
-            <H6>Discussion Title</H6>
+            <StyledText>Discussion Title</StyledText>
 
             <Spacer size={"$3"} />
           </YStack>
@@ -54,7 +60,9 @@ const Discussion = () => {
           <Ionicons name="heart-outline" size={18} color={theme.colors.icon} />
           {/* <Ionicons name="heart" size={18} color={"red"} /> */}
 
-          <Paragraph>{numberToShortString(1320700)}</Paragraph>
+          <StyledText fontSize={"$sm"}>
+            {numberToShortString(1320700)}
+          </StyledText>
         </XStack>
 
         <XStack alignItems={"center"} gap={"$2"}>
@@ -64,13 +72,13 @@ const Discussion = () => {
             color={theme.colors.icon}
           />
 
-          <Paragraph>{numberToShortString(2140)}</Paragraph>
+          <StyledText fontSize={"$sm"}>{numberToShortString(2140)}</StyledText>
         </XStack>
 
         <XStack alignItems={"center"} gap={"$2"}>
           <Ionicons name="share-outline" size={18} color={theme.colors.icon} />
 
-          <Paragraph>Share</Paragraph>
+          <StyledText fontSize={"$sm"}>Share</StyledText>
         </XStack>
 
         <XStack alignItems={"center"} gap={"$2"}>

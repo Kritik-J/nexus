@@ -46,7 +46,7 @@ export const BaseButton = (props: ButtonProps) => {
   return (
     <ButtonFrame
       size={"$4"}
-      fontSize={"$3"}
+      fontSize={"$sm"}
       {...props}
       icon={props.loading ? null : props.icon}
       iconAfter={props.loading ? null : props.iconAfter}

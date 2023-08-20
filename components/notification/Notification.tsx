@@ -1,10 +1,9 @@
 import React from "react";
-import { Avatar, H5, H6, Paragraph, Spacer, XStack, YStack } from "tamagui";
+import { Avatar, XStack, YStack } from "tamagui";
 import { Pressable } from "react-native";
-import { Link, router } from "expo-router";
-import { Ionicons } from "@expo/vector-icons";
 import useTheme from "@/hooks/useTheme";
 import { SecondaryButton } from "../button";
+import { StyledText } from "../styledtext";
 
 const JoinedNotification = () => {
   const theme = useTheme();
@@ -22,14 +21,16 @@ const JoinedNotification = () => {
           <Avatar.Fallback bc={"$gray4"} />
         </Avatar>
 
-        <Paragraph flex={1}>You have joined Spiderman community</Paragraph>
+        <StyledText fontSize={"$sm"} flex={1}>
+          You have joined Spiderman community
+        </StyledText>
 
         <SecondaryButton
           onPress={() => {
             console.log("Leave Community");
           }}
           size={"$3"}
-          fontSize={"$2"}
+          fontSize={"$xs"}
         >
           Leave
         </SecondaryButton>

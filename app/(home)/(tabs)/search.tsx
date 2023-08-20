@@ -1,10 +1,11 @@
 import React from "react";
 import { Box } from "@/components/box";
 import { Searchbar } from "@/components/searchbar";
-import { Paragraph, Separator, XStack, YStack } from "tamagui";
+import { Separator, XStack, YStack } from "tamagui";
 import { Ionicons } from "@expo/vector-icons";
 import useTheme from "@/hooks/useTheme";
 import { router } from "expo-router";
+import { StyledText } from "@/components/styledtext";
 
 const SearchScreen = () => {
   const theme = useTheme();
@@ -36,12 +37,12 @@ const SearchScreen = () => {
       <Separator />
 
       <YStack p={10} flex={1}>
-        <Paragraph color={"$gray12"}>
+        <StyledText fontSize={"$sm"} color={"$gray12"}>
           No results for{" "}
-          <Paragraph fontWeight={"600"} color={"$blue10"}>
+          <StyledText fontSize={"$sm"} fontWeight={"600"} color={"$blue10"}>
             “Spiderman”
-          </Paragraph>
-        </Paragraph>
+          </StyledText>
+        </StyledText>
       </YStack>
     </Box>
   );

@@ -1,14 +1,6 @@
 import React from "react";
 import { Image, FlatList } from "react-native";
-import {
-  Avatar,
-  H4,
-  Paragraph,
-  Separator,
-  Spacer,
-  XStack,
-  YStack,
-} from "tamagui";
+import { Avatar, Separator, Spacer, XStack, YStack } from "tamagui";
 import communities from "@/assets/data/communities";
 import { Box } from "@/components/box";
 import { numberToShortString } from "@/utils/transformation";
@@ -18,7 +10,7 @@ import useTheme from "@/hooks/useTheme";
 import { Header } from "@/components/header";
 import { Ionicons } from "@expo/vector-icons";
 import { Searchbar } from "@/components/searchbar";
-import { H5 } from "tamagui";
+import { StyledText } from "@/components/styledtext";
 
 const CommunityScreen = () => {
   return (
@@ -78,22 +70,26 @@ export const CommunityHeader = () => {
 
         <Spacer size={"$3"} />
 
-        <H5 fontWeight={"600"}>{communities[1].name}</H5>
+        <StyledText fontSize={"$lg"} fontWeight={"600"}>
+          {communities[1].name}
+        </StyledText>
 
         <Spacer size={"$2"} />
 
-        <Paragraph color={"$gray12"}>{communities[1].description}</Paragraph>
+        <StyledText fontSize={"$sm"} color={"$gray12"}>
+          {communities[1].description}
+        </StyledText>
 
         <Spacer size={"$2"} />
 
         <XStack alignItems={"center"} gap={"$5"}>
-          <Paragraph color={"$gray12"}>
+          <StyledText fontSize={"$sm"} color={"$gray12"}>
             {numberToShortString(communities[1].members)} members
-          </Paragraph>
+          </StyledText>
 
-          <Paragraph color={"$gray12"}>
+          <StyledText fontSize={"$sm"} color={"$gray12"}>
             {numberToShortString(communities[1].discussions)} discussions
-          </Paragraph>
+          </StyledText>
         </XStack>
 
         <Spacer size={"$3"} />

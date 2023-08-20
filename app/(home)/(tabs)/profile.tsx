@@ -1,10 +1,11 @@
 import React from "react";
 import { Box } from "@/components/box";
-import { Avatar, H5, H6, Paragraph, Separator, Spacer, YStack } from "tamagui";
+import { Avatar, Separator, Spacer, YStack } from "tamagui";
 import { Image } from "react-native";
 import { Header } from "@/components/header";
 import useTheme from "@/hooks/useTheme";
 import { PrimaryButton, SecondaryButton } from "@/components/button";
+import { StyledText } from "@/components/styledtext";
 
 const ProfileScreen = () => {
   const theme = useTheme();
@@ -35,13 +36,13 @@ const ProfileScreen = () => {
 
         <Spacer size={"$2"} />
 
-        <H5>John Doe | @john_doe</H5>
+        <StyledText fontSize={"$lg"}>John Doe | @john_doe</StyledText>
 
         <Spacer size={"$2"} />
 
-        <Paragraph color={"$gray11"}>
+        <StyledText fontSize={"$sm"} color={"$gray11"}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-        </Paragraph>
+        </StyledText>
 
         <Spacer size={"$3"} />
 

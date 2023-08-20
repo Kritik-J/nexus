@@ -1,6 +1,6 @@
 import React from "react";
 import { Box } from "@/components/box";
-import { H5, Paragraph, Separator, Spacer, XStack, YStack } from "tamagui";
+import { Separator, Spacer, XStack, YStack } from "tamagui";
 import { Header } from "@/components/header";
 import { Ionicons } from "@expo/vector-icons";
 import { numberToShortString } from "@/utils/transformation";
@@ -10,6 +10,7 @@ import { Message } from "@/components/message";
 import messages from "@/assets/data/messages";
 import { Input } from "@/components/input";
 import { IconButton } from "@/components/button";
+import { StyledText } from "@/components/styledtext";
 
 const DiscussionScreen = () => {
   const theme = useTheme();
@@ -62,16 +63,20 @@ export const DiscussionInfoHeader = () => {
     <YStack>
       <YStack p={10} backgroundColor={"$background"}>
         <XStack ai={"center"} gap={"$2"}>
-          <Paragraph color={"$gray12"} fontWeight={"600"}>
+          <StyledText fontSize={"$sm"} color={"$gray12"} fontWeight={"600"}>
             @username
-          </Paragraph>
+          </StyledText>
 
-          <Paragraph color={"$gray12"}>2 hours ago</Paragraph>
+          <StyledText fontSize={"$sm"} color={"$gray12"}>
+            2 hours ago
+          </StyledText>
         </XStack>
 
         <Spacer size={"$2"} />
 
-        <H5 fontWeight={"600"}>Who is the best Spiderman?</H5>
+        <StyledText fontSize={"$lg"} fontWeight={"600"}>
+          Who is the best Spiderman?
+        </StyledText>
 
         <Spacer size={"$4"} />
 
@@ -84,7 +89,9 @@ export const DiscussionInfoHeader = () => {
             {/* <Ionicons name="heart-outline" size={18} color={theme.colors.icon} /> */}
             <Ionicons name="heart" size={18} color={"red"} />
 
-            <Paragraph>{numberToShortString(15000)}</Paragraph>
+            <StyledText fontSize={"$sm"}>
+              {numberToShortString(15000)}
+            </StyledText>
           </XStack>
 
           <XStack alignItems={"center"} gap={"$2"}>
@@ -94,7 +101,9 @@ export const DiscussionInfoHeader = () => {
               color={theme.colors.icon}
             />
 
-            <Paragraph>{numberToShortString(25930)}</Paragraph>
+            <StyledText fontSize={"$sm"}>
+              {numberToShortString(25930)}
+            </StyledText>
           </XStack>
 
           <XStack alignItems={"center"} gap={"$2"}>
@@ -104,7 +113,7 @@ export const DiscussionInfoHeader = () => {
               color={theme.colors.icon}
             />
 
-            <Paragraph>Share</Paragraph>
+            <StyledText fontSize={"$sm"}>Share</StyledText>
           </XStack>
 
           <XStack alignItems={"center"} gap={"$2"}>
@@ -114,7 +123,7 @@ export const DiscussionInfoHeader = () => {
               color={theme.colors.icon}
             />
 
-            <Paragraph>Save</Paragraph>
+            <StyledText fontSize={"$sm"}>Save</StyledText>
           </XStack>
         </XStack>
       </YStack>

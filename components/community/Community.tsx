@@ -1,8 +1,9 @@
 import React from "react";
-import { Avatar, H5, Paragraph, Spacer, XStack, YStack } from "tamagui";
+import { Avatar, Spacer, XStack, YStack } from "tamagui";
 import { Image, Pressable } from "react-native";
 import { numberToShortString } from "@/utils/transformation";
 import { router } from "expo-router";
+import { StyledText } from "../styledtext";
 
 export type CommunityProps = {
   isLast?: boolean;
@@ -52,22 +53,26 @@ const Community = ({ isLast, community }: CommunityProps) => {
 
           <Spacer size={5} />
 
-          <H5 fontWeight={"600"}>{community.name}</H5>
+          <StyledText fontSize={"$lg"} fontWeight={"600"}>
+            {community.name}
+          </StyledText>
 
           <Spacer size={2} />
 
-          <Paragraph color={"$gray11"}>{community.description}</Paragraph>
+          <StyledText fontSize={"$sm"} color={"$gray11"}>
+            {community.description}
+          </StyledText>
 
           <Spacer size={2} />
 
           <XStack alignItems={"center"} spaceDirection="horizontal" space="$5">
-            <Paragraph color={"$gray11"}>
+            <StyledText fontSize={"$sm"} color={"$gray11"}>
               {numberToShortString(community.members)} members
-            </Paragraph>
+            </StyledText>
 
-            <Paragraph color={"$gray11"}>
+            <StyledText fontSize={"$sm"} color={"$gray11"}>
               {numberToShortString(community.discussions)} discussions
-            </Paragraph>
+            </StyledText>
           </XStack>
         </YStack>
       </YStack>

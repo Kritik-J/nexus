@@ -1,8 +1,9 @@
 import React from "react";
 import { Ionicons } from "@expo/vector-icons";
 import { router } from "expo-router";
-import { XStack, Paragraph, GetProps, View } from "tamagui";
+import { XStack, GetProps, View } from "tamagui";
 import useTheme from "@/hooks/useTheme";
+import { StyledText } from "@/components/styledtext";
 
 export type HeaderProps = GetProps<typeof XStack> & {
   title?: string;
@@ -30,13 +31,13 @@ export const Header = (props: HeaderProps) => {
         }}
       />
 
-      <Paragraph fontSize={16}>
+      <StyledText fontSize={16}>
         {props.title
           ? props.title.length > 32
             ? props.title.slice(0, 32) + "..."
             : props.title
           : ""}
-      </Paragraph>
+      </StyledText>
 
       {menu ? (
         <Ionicons
@@ -71,7 +72,7 @@ export const MessagesHeader = (props: HeaderProps) => {
         }}
       />
 
-      <Paragraph fontSize={16}>Messages</Paragraph>
+      <StyledText fontSize={16}>Messages</StyledText>
 
       <XStack spaceDirection="horizontal" space={10}>
         <Ionicons name="create-outline" size={20} color={theme.colors.icon} />
