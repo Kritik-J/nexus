@@ -9,7 +9,8 @@ const HomeLayout = () => {
   return (
     <Stack screenOptions={{ headerShown: false, animation: "none" }}>
       <Stack.Screen name="(tabs)" />
-      <Stack.Screen name="search" />
+      <Stack.Screen name="notifications" />
+      <Stack.Screen name="messages" />
       <Stack.Screen name="discussion/[id]" />
       <Stack.Screen name="community/[id]" />
     </Stack>

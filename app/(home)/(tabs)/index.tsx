@@ -21,11 +21,20 @@ export const Header = () => {
 
         <XStack alignItems="center" gap="$4">
           <Ionicons
-            name="search-outline"
+            name="notifications-outline"
             size={24}
             color={theme.colors.icon}
             onPress={() => {
-              router.push("search");
+              router.push("notifications");
+            }}
+          />
+
+          <Ionicons
+            name="chatbubble-ellipses-outline"
+            size={24}
+            color={theme.colors.icon}
+            onPress={() => {
+              router.push("messages");
             }}
           />
         </XStack>

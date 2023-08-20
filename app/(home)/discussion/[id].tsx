@@ -1,6 +1,6 @@
 import React from "react";
 import { Box } from "@/components/box";
-import { H4, Paragraph, Separator, Spacer, XStack, YStack } from "tamagui";
+import { H5, Paragraph, Separator, Spacer, XStack, YStack } from "tamagui";
 import { Header } from "@/components/header";
 import { Ionicons } from "@expo/vector-icons";
 import { numberToShortString } from "@/utils/transformation";
@@ -71,7 +71,7 @@ export const DiscussionInfoHeader = () => {
 
         <Spacer size={"$2"} />
 
-        <H4 fontWeight={"600"}>Who is the best Spiderman?</H4>
+        <H5 fontWeight={"600"}>Who is the best Spiderman?</H5>
 
         <Spacer size={"$4"} />
 

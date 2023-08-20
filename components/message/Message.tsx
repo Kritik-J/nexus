@@ -44,9 +44,11 @@ export const MessageContainer = (props: MessageProps) => {
             <Avatar.Fallback bc={"$gray4"} />
           </Avatar>
 
-          <Paragraph fontWeight={"600"}>@{message.username}</Paragraph>
+          <Paragraph fontWeight={"600"} color={"$gray11"}>
+            @{message.username}
+          </Paragraph>
 
-          <Paragraph>{message.time}</Paragraph>
+          <Paragraph color={"$gray11"}>{message.time}</Paragraph>
         </XStack>
 
         {message.repliedTo ? (

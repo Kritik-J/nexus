@@ -15,11 +15,19 @@ const ProfileScreen = () => {
         source={{ uri: "https://picsum.photos/1200/300" }}
         style={{
           width: "100%",
-          aspectRatio: 12 / 3,
+          aspectRatio: 12 / 4,
         }}
       />
-      <YStack px={10} pb={10} mt={-36}>
-        <Avatar size={72} circular>
+      <YStack
+        mt={-16}
+        btrr={16}
+        btlr={16}
+        backgroundColor={"$background"}
+        f={1}
+        px={10}
+        pb={10}
+      >
+        <Avatar size={72} circular mt={-36}>
           {/* <Avatar.Image source={{ uri: "https://picsum.photos/200" }} /> */}
 
           <Avatar.Fallback bc={"$gray4"} />

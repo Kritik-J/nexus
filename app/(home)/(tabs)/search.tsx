@@ -13,15 +13,6 @@ const SearchScreen = () => {
     <Box>
       <YStack p={10}>
         <XStack alignItems="center" gap={10}>
-          <Ionicons
-            name="close"
-            size={24}
-            color={theme.colors.icon}
-            onPress={() => {
-              router.back();
-            }}
-          />
-
           <Searchbar
             borderRadius={50}
             placeholder={"Search..."}
@@ -29,6 +20,7 @@ const SearchScreen = () => {
             onChangeText={(text) => {
               console.log(text);
             }}
+            flex={1}
           />
 
           <Ionicons name="mic-outline" size={24} color={theme.colors.icon} />

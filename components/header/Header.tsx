@@ -1,17 +1,17 @@
 import React from "react";
 import { Ionicons } from "@expo/vector-icons";
 import { router } from "expo-router";
-import { XStack, Paragraph, GetProps } from "tamagui";
+import { XStack, Paragraph, GetProps, View } from "tamagui";
 import useTheme from "@/hooks/useTheme";
 
 export type HeaderProps = GetProps<typeof XStack> & {
   title?: string;
+  menu?: boolean;
 };
 
 export const Header = (props: HeaderProps) => {
   const theme = useTheme();
-
-  let str = "Hello World Hello World Hello Hello World";
+  const { menu = true } = props;
 
   return (
     <XStack
@@ -30,7 +30,7 @@ export const Header = (props: HeaderProps) => {
         }}
       />
 
-      <Paragraph>
+      <Paragraph fontSize={16}>
         {props.title
           ? props.title.length > 32
             ? props.title.slice(0, 32) + "..."
@@ -38,11 +38,44 @@ export const Header = (props: HeaderProps) => {
           : ""}
       </Paragraph>
 
+      {menu ? (
+        <Ionicons
+          name="ellipsis-horizontal"
+          size={20}
+          color={theme.colors.icon}
+        />
+      ) : (
+        <View></View>
+      )}
+    </XStack>
+  );
+};
+
+export const MessagesHeader = (props: HeaderProps) => {
+  const theme = useTheme();
+
+  return (
+    <XStack
+      justifyContent="space-between"
+      ai={"center"}
+      p={10}
+      {...props}
+      width="100%"
+    >
       <Ionicons
-        name="ellipsis-horizontal"
-        size={20}
+        name="close"
+        size={24}
         color={theme.colors.icon}
+        onPress={() => {
+          router.back();
+        }}
       />
+
+      <Paragraph fontSize={16}>Messages</Paragraph>
+
+      <XStack spaceDirection="horizontal" space={10}>
+        <Ionicons name="create-outline" size={20} color={theme.colors.icon} />
+      </XStack>
     </XStack>
   );
 };

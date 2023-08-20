@@ -18,6 +18,7 @@ import useTheme from "@/hooks/useTheme";
 import { Header } from "@/components/header";
 import { Ionicons } from "@expo/vector-icons";
 import { Searchbar } from "@/components/searchbar";
+import { H5 } from "tamagui";
 
 const CommunityScreen = () => {
   return (
@@ -77,7 +78,7 @@ export const CommunityHeader = () => {
 
         <Spacer size={"$3"} />
 
-        <H4 fontWeight={"600"}>{communities[1].name}</H4>
+        <H5 fontWeight={"600"}>{communities[1].name}</H5>
 
         <Spacer size={"$2"} />
 
@@ -126,6 +127,7 @@ export const CommunityHeader = () => {
           size={"$3"}
           placeholder={"Search discussions"}
           borderRadius={25}
+          flex={1}
         />
 
         <Ionicons name="options-outline" size={24} color={theme.colors.text} />

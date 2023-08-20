@@ -28,7 +28,6 @@ export const Searchbar = (props: InputProps) => {
     //   {...props.containerProps}
     // >
     <BaseSearchInput
-      flex={1}
       backgroundColor="$gray2"
       placeholder="Search"
       size="$4"

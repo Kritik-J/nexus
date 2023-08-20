@@ -29,8 +29,8 @@ const Discussion = () => {
 
           <YStack f={1}>
             <XStack justifyContent={"space-between"} alignItems={"center"}>
-              <Paragraph>@username</Paragraph>
-              <Paragraph>2 hours ago</Paragraph>
+              <Paragraph color={"$gray11"}>@username</Paragraph>
+              <Paragraph color={"$gray11"}>2 hours ago</Paragraph>
             </XStack>
             <Spacer size={"$2"} />
 
