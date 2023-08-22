@@ -29,7 +29,6 @@ const JoinedNotification = () => {
           onPress={() => {
             console.log("Leave Community");
           }}
-          size={"$3"}
           fontSize={"$xs"}
         >
           Leave

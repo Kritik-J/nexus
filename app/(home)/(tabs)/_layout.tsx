@@ -1,5 +1,5 @@
 import useTheme from "@/hooks/useTheme";
-import { FontAwesome, Ionicons } from "@expo/vector-icons";
+import { Ionicons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
 
 export const unstable_settings = {
@@ -14,7 +14,7 @@ export default function TabLayout() {
       screenOptions={{
         tabBarActiveTintColor: theme.colors.tabIconSelected,
         headerShown: false,
-        tabBarLabel: () => null,
+        // tabBarLabel: () => null,
       }}
     >
       <Tabs.Screen
@@ -33,6 +33,31 @@ export default function TabLayout() {
           title: "Search",
           tabBarIcon: ({ color }) => (
             <Ionicons name="search-outline" color={color} size={24} />
+          ),
+        }}
+      />
+
+      <Tabs.Screen
+        name="create"
+        options={{
+          title: "Create",
+          tabBarLabel: () => null,
+          tabBarIcon: ({ color }) => (
+            <Ionicons name="add-circle-outline" color={color} size={32} />
+          ),
+        }}
+      />
+
+      <Tabs.Screen
+        name="messages"
+        options={{
+          title: "Messages",
+          tabBarIcon: ({ color }) => (
+            <Ionicons
+              name="chatbubble-ellipses-outline"
+              color={color}
+              size={24}
+            />
           ),
         }}
       />

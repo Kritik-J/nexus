@@ -45,7 +45,7 @@ export type ButtonProps = GetProps<typeof ButtonFrame> & {
 export const BaseButton = (props: ButtonProps) => {
   return (
     <ButtonFrame
-      size={"$4"}
+      size={"$3"}
       fontSize={"$sm"}
       {...props}
       icon={props.loading ? null : props.icon}

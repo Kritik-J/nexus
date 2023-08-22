@@ -101,15 +101,16 @@ export const CommunityHeader = () => {
               console.log("Leave Community");
             }}
           >
-            Leave Community
+            Subscribed
           </SecondaryButton>
         ) : (
           <PrimaryButton
+            flex={1}
             onPress={() => {
               console.log("Join Community");
             }}
           >
-            Join Community
+            Subscribe
           </PrimaryButton>
         )}
       </YStack>

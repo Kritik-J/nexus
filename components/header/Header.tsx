@@ -51,32 +51,3 @@ export const Header = (props: HeaderProps) => {
     </XStack>
   );
 };
-
-export const MessagesHeader = (props: HeaderProps) => {
-  const theme = useTheme();
-
-  return (
-    <XStack
-      justifyContent="space-between"
-      ai={"center"}
-      p={10}
-      {...props}
-      width="100%"
-    >
-      <Ionicons
-        name="close"
-        size={24}
-        color={theme.colors.icon}
-        onPress={() => {
-          router.back();
-        }}
-      />
-
-      <StyledText fontSize={16}>Messages</StyledText>
-
-      <XStack spaceDirection="horizontal" space={10}>
-        <Ionicons name="create-outline" size={20} color={theme.colors.icon} />
-      </XStack>
-    </XStack>
-  );
-};

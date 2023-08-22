@@ -1,12 +1,12 @@
 import { FlatList } from "react-native";
 import { Community } from "@/components/community";
-import Screen from "@/components/box/Box";
 import communities from "@/assets/data/communities";
 import { XStack, YStack } from "tamagui";
 import { Ionicons } from "@expo/vector-icons";
 import useTheme from "@/hooks/useTheme";
 import { router } from "expo-router";
 import { StyledText } from "@/components/styledtext";
+import { Box } from "@/components/box";
 
 export const Header = () => {
   const theme = useTheme();
@@ -34,15 +34,6 @@ export const Header = () => {
               router.push("notifications");
             }}
           />
-
-          <Ionicons
-            name="chatbubble-ellipses-outline"
-            size={24}
-            color={theme.colors.icon}
-            onPress={() => {
-              router.push("messages");
-            }}
-          />
         </XStack>
       </XStack>
     </YStack>
@@ -51,7 +42,7 @@ export const Header = () => {
 
 export default function HomeScreen() {
   return (
-    <Screen>
+    <Box>
       <FlatList
         contentContainerStyle={{
           padding: 10,
@@ -67,6 +58,6 @@ export default function HomeScreen() {
         )}
         showsVerticalScrollIndicator={false}
       />
-    </Screen>
+    </Box>
   );
 }

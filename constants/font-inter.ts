@@ -24,6 +24,7 @@ const size = {
 } as const;
 
 const lineHeight = {
+  "2xs": 14,
   xs: 16,
   sm: 20,
   base: 24,

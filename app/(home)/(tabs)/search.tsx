@@ -4,7 +4,6 @@ import { Searchbar } from "@/components/searchbar";
 import { Separator, XStack, YStack } from "tamagui";
 import { Ionicons } from "@expo/vector-icons";
 import useTheme from "@/hooks/useTheme";
-import { router } from "expo-router";
 import { StyledText } from "@/components/styledtext";
 
 const SearchScreen = () => {

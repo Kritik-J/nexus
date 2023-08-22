@@ -4,13 +4,7 @@ import { StyledText } from "../styledtext";
 
 const ChatListItem = () => {
   return (
-    <XStack
-      //   borderBottomWidth={1}
-      //   borderBottomColor={"$gray4"}
-      p={10}
-      spaceDirection="horizontal"
-      space={10}
-    >
+    <XStack p={10} spaceDirection="horizontal" space={15}>
       <Avatar circular size={"$4.5"}>
         <Avatar.Image
           source={{
