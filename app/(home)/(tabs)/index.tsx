@@ -7,6 +7,7 @@ import useTheme from "@/hooks/useTheme";
 import { router } from "expo-router";
 import { StyledText } from "@/components/styledtext";
 import { Box } from "@/components/box";
+import { HomeDiscussion } from "@/components/discussion";
 
 export const Header = () => {
   const theme = useTheme();
