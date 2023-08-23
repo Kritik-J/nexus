@@ -6,8 +6,8 @@ import { Ionicons } from "@expo/vector-icons";
 import { numberToShortString } from "@/utils/transformation";
 import useTheme from "@/hooks/useTheme";
 import { FlatList } from "react-native";
-import { Message } from "@/components/message";
-import messages from "@/assets/data/messages";
+import { Comment } from "@/components/comment";
+import comments from "@/assets/data/comments";
 import { Input } from "@/components/input";
 import { IconButton } from "@/components/button";
 import { StyledText } from "@/components/styledtext";
@@ -22,9 +22,9 @@ const DiscussionScreen = () => {
       <FlatList
         ListHeaderComponent={DiscussionInfoHeader}
         showsVerticalScrollIndicator={false}
-        data={messages}
+        data={comments}
         renderItem={({ item, index }) => (
-          <Message message={item} isLast={index === messages.length - 1} />
+          <Comment comment={item} isLast={index === comments.length - 1} />
         )}
       />
 

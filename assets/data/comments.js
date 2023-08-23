@@ -1,4 +1,4 @@
-const messages = [
+const comments = [
   {
     id: 1,
     username: "username1",
@@ -51,4 +51,4 @@ const messages = [
   },
 ];
 
-export default messages;
+export default comments;

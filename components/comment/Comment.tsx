@@ -1,11 +1,11 @@
 import React from "react";
 import { Avatar, Separator, Spacer, XStack, YStack } from "tamagui";
-import messages from "@/assets/data/messages";
+import comments from "@/assets/data/comments";
 import useTheme from "@/hooks/useTheme";
 import { StyledText } from "../styledtext";
 
-export type MessageProps = {
-  message: {
+export type CommentProps = {
+  comment: {
     id: number;
     username: string;
     text: string;
@@ -15,13 +15,13 @@ export type MessageProps = {
   isLast?: boolean;
 };
 
-export const Message = (props: MessageProps) => {
+export const Comment = (props: CommentProps) => {
   const { isLast } = props;
 
   return (
     <>
       <YStack p={10}>
-        <MessageContainer {...props} />
+        <CommentContainer {...props} />
       </YStack>
 
       {isLast ? null : (
@@ -31,8 +31,8 @@ export const Message = (props: MessageProps) => {
   );
 };
 
-export const MessageContainer = (props: MessageProps) => {
-  const { message } = props;
+export const CommentContainer = (props: CommentProps) => {
+  const { comment } = props;
   const theme = useTheme();
 
   return (
@@ -46,15 +46,15 @@ export const MessageContainer = (props: MessageProps) => {
           </Avatar>
 
           <StyledText fontSize={"$sm"} fontWeight={"600"} color={"$gray11"}>
-            @{message.username}
+            @{comment.username}
           </StyledText>
 
           <StyledText fontSize={"$sm"} color={"$gray11"}>
-            {message.time}
+            {comment.time}
           </StyledText>
         </XStack>
 
-        {message.repliedTo ? (
+        {comment.repliedTo ? (
           <>
             <Spacer size={"$3"} />
 
@@ -68,7 +68,7 @@ export const MessageContainer = (props: MessageProps) => {
               borderLeftWidth={4}
             >
               <StyledText fontSize={"$sm"} fontWeight={"600"}>
-                {messages.find((m) => m.id === message.repliedTo)?.text}
+                {comments.find((m) => m.id === comment.repliedTo)?.text}
               </StyledText>
             </XStack>
           </>
@@ -76,7 +76,7 @@ export const MessageContainer = (props: MessageProps) => {
 
         <Spacer size={"$3"} />
 
-        <StyledText>{message.text}</StyledText>
+        <StyledText>{comment.text}</StyledText>
       </YStack>
     </XStack>
   );
