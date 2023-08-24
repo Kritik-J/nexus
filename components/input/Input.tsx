@@ -51,7 +51,7 @@ export const Input = (props: InputProps) => {
       <BaseInput {...props} />
 
       {props.error && props.errorText && (
-        <Text color={"$red10"} mt={"$1"} fontSize={"$3"}>
+        <Text color={"$red10"} mt={"$1"} fontSize={"$base"}>
           {props.errorText}
         </Text>
       )}
