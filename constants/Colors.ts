@@ -12,7 +12,7 @@ const glassBackgroundLight = "#ffffff5a";
 const dangerButtonColorLight = "#F45050";
 const dangerButtonTextColorLight = "#FFCAC8";
 
-const backgroundColorDark = "#000";
+const backgroundColorDark = "#040D12";
 const textColorDark = "#fff";
 const tintColorDark = "#fff";
 const tabIconDefaultDark = "#ccc";

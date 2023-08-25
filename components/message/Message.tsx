@@ -6,6 +6,7 @@ const Message = () => {
   return (
     <YStack
       p={10}
+      my={5}
       backgroundColor={"$gray3"}
       borderRadius={10}
       alignSelf={"flex-start"}

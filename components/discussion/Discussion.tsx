@@ -42,14 +42,14 @@ const Discussion = () => {
 
             <StyledText>Discussion Title</StyledText>
 
-            <Spacer size={"$3"} />
+            <Spacer size={"$1"} />
           </YStack>
         </XStack>
       </YStack>
 
       <XStack
         p={10}
-        borderTopWidth={1}
+        // borderTopWidth={1}
         borderBottomWidth={1}
         borderColor={"$gray3"}
         alignItems={"center"}

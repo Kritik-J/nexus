@@ -128,7 +128,7 @@ export const DiscussionInfoHeader = () => {
         </XStack>
       </YStack>
 
-      <Spacer size={"$2"} />
+      <Spacer size={"$1"} />
 
       <Separator borderBottomColor={"$gray3"} borderBottomWidth={4} />
 

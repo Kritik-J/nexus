@@ -1,30 +1,26 @@
-import { FlatList } from "react-native";
-import { Community } from "@/components/community";
-import communities from "@/assets/data/communities";
-import { XStack, YStack } from "tamagui";
+import { Separator, Spacer, XStack, YStack } from "tamagui";
 import { Ionicons } from "@expo/vector-icons";
 import useTheme from "@/hooks/useTheme";
 import { router } from "expo-router";
 import { StyledText } from "@/components/styledtext";
 import { Box } from "@/components/box";
 import { HomeDiscussion } from "@/components/discussion";
+import { FlatList } from "react-native";
 
 export const Header = () => {
   const theme = useTheme();
 
   return (
-    <YStack bg={"$background"} mb={15}>
+    <YStack p={10} borderBottomWidth={1} borderColor={"$gray3"}>
       <XStack justifyContent="space-between" alignItems="center">
-        <YStack>
-          <StyledText
-            fontSize={"$2xl"}
-            fontWeight="$bold"
-            fontStyle="italic"
-            color={"$blue10"}
-          >
-            Nexus
-          </StyledText>
-        </YStack>
+        <StyledText
+          fontSize={"$2xl"}
+          fontWeight="$bold"
+          fontStyle="italic"
+          color={"$blue10"}
+        >
+          Nexus
+        </StyledText>
 
         <XStack alignItems="center" gap="$4">
           <Ionicons
@@ -44,19 +40,11 @@ export const Header = () => {
 export default function HomeScreen() {
   return (
     <Box>
+      <Header />
+
       <FlatList
-        contentContainerStyle={{
-          padding: 10,
-        }}
-        ListHeaderComponent={Header}
-        data={communities}
-        renderItem={({ item, index }) => (
-          <Community
-            key={item.id}
-            community={item}
-            isLast={index === communities.length - 1}
-          />
-        )}
+        data={[1, 2, 3, 4, 5, 6, 7, 8, 9]}
+        renderItem={({ item, index }) => <HomeDiscussion key={index} />}
         showsVerticalScrollIndicator={false}
       />
     </Box>
