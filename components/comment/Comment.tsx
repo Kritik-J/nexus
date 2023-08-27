@@ -67,7 +67,7 @@ export const CommentContainer = (props: CommentProps) => {
               borderLeftColor={theme.colors.primaryButtonColor}
               borderLeftWidth={4}
             >
-              <StyledText fontSize={"$sm"} fontWeight={"600"}>
+              <StyledText fontSize={"$sm"}>
                 {comments.find((m) => m.id === comment.repliedTo)?.text}
               </StyledText>
             </XStack>

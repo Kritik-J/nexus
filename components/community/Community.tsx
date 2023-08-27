@@ -25,7 +25,16 @@ const Community = ({ isLast, community }: CommunityProps) => {
         router.push(`/community/${community.id}`);
       }}
     >
-      <YStack br={16} mb={isLast ? 0 : 10} backgroundColor={"$gray2"}>
+      <YStack
+        br={16}
+        mb={isLast ? 0 : 10}
+        backgroundColor={"$colorTransparent"}
+        elevation={1}
+        shadowColor={"$gray12"}
+        shadowOffset={{ width: 0, height: 1 }}
+        shadowOpacity={0.2}
+        shadowRadius={2}
+      >
         <Image
           source={{
             uri: community.cover,
@@ -38,7 +47,13 @@ const Community = ({ isLast, community }: CommunityProps) => {
           }}
         />
 
-        <YStack mt={-16} px={10} pb={10} br={16} backgroundColor={"$gray2"}>
+        <YStack
+          mt={-16}
+          px={10}
+          pb={10}
+          br={16}
+          backgroundColor={"$background"}
+        >
           <Avatar
             size={50}
             circular
