@@ -69,9 +69,9 @@ export const PrimaryButton = (props: ButtonProps) => {
   return (
     <BaseButton
       {...props}
-      bg={"$primaryButtonColor"}
-      color={"$primaryButtonTextColor"}
-      activityIndicatorColor={theme.colors.primaryButtonTextColor}
+      bg={"$primaryButton"}
+      color={"$primaryButtonText"}
+      activityIndicatorColor={theme.colors.primaryButtonText}
     >
       {props.children}
     </BaseButton>
@@ -84,9 +84,9 @@ export const SecondaryButton = (props: ButtonProps) => {
   return (
     <BaseButton
       {...props}
-      bg={"$secondaryButtonColor"}
-      color={"$secondaryButtonTextColor"}
-      activityIndicatorColor={theme.colors.secondaryButtonTextColor}
+      bg={"$secondaryButton"}
+      color={"$secondaryButtonText"}
+      activityIndicatorColor={theme.colors.secondaryButtonText}
     >
       {props.children}
     </BaseButton>
@@ -99,9 +99,9 @@ export const DangerButton = (props: ButtonProps) => {
   return (
     <BaseButton
       {...props}
-      bg={"$dangerButtonColor"}
-      color={"$dangerButtonTextColor"}
-      activityIndicatorColor={theme.colors.dangerButtonTextColor}
+      bg={"$dangerButton"}
+      color={"$dangerButtonText"}
+      activityIndicatorColor={theme.colors.dangerButtonText}
     >
       {props.children}
     </BaseButton>

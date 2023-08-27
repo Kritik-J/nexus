@@ -1,91 +1,97 @@
-const backgroundColorLight = "#fff";
-const textColorLight = "#000";
-const tintColorLight = "#2f95dc";
+const backgroundLight = "#fff";
+const textLight = "#000";
+const tintLight = "#2f95dc";
 const tabIconDefaultLight = "#ccc";
-const iconColorLight = "#000";
-const shadowColorLight = "#0000005a";
-const primaryButtonColorLight = "#068FFF";
-const primaryButtonTextColorLight = "#fff";
-const secondaryButtonColorLight = "#000";
-const secondaryButtonTextColorLight = "#fff";
+const iconLight = "#000";
+const shadowLight = "#0000005a";
+const primaryButtonLight = "#068FFF";
+const primaryButtonTextLight = "#fff";
+const secondaryButtonLight = "#000";
+const secondaryButtonTextLight = "#fff";
 const glassBackgroundLight = "#ffffff5a";
-const dangerButtonColorLight = "#F45050";
-const dangerButtonTextColorLight = "#FFCAC8";
+const dangerButtonLight = "#F45050";
+const dangerButtonTextLight = "#FFCAC8";
+const headerBackgroundLight = "#eeeeee";
 
-const backgroundColorDark = "#040D12";
-const textColorDark = "#fff";
-const tintColorDark = "#fff";
+const backgroundDark = "#000";
+const textDark = "#fff";
+const tintDark = "#fff";
 const tabIconDefaultDark = "#ccc";
-const iconColorDark = "#fff";
-const shadowColorDark = "#ffffff5a";
-const primaryButtonColorDark = "#068FFF";
-const primaryButtonTextColorDark = "#fff";
-const secondaryButtonColorDark = "#fff";
-const secondaryButtonTextColorDark = "#000";
+const iconDark = "#fff";
+const shadowDark = "#ffffff5a";
+const primaryButtonDark = "#068FFF";
+const primaryButtonTextDark = "#fff";
+const secondaryButtonDark = "#fff";
+const secondaryButtonTextDark = "#000";
 const glassBackgroundDark = "#0000005a";
-const dangerButtonColorDark = "#F45050";
-const dangerButtonTextColorDark = "#FFCAC8";
+const dangerButtonDark = "#F45050";
+const dangerButtonTextDark = "#FFCAC8";
+const headerBackgroundDark = "#171717";
 
 export default {
-  textColorLight,
-  backgroundColorLight,
-  tintColorLight,
+  textLight,
+  backgroundLight,
+  tintLight,
   tabIconDefaultLight,
-  iconColorLight,
-  shadowColorLight,
-  primaryButtonColorLight,
-  primaryButtonTextColorLight,
-  secondaryButtonColorLight,
-  secondaryButtonTextColorLight,
+  iconLight,
+  shadowLight,
+  primaryButtonLight,
+  primaryButtonTextLight,
+  secondaryButtonLight,
+  secondaryButtonTextLight,
   glassBackgroundLight,
-  dangerButtonColorLight,
-  dangerButtonTextColorLight,
+  dangerButtonLight,
+  dangerButtonTextLight,
+  headerBackgroundLight,
 
-  textColorDark,
-  backgroundColorDark,
-  tintColorDark,
+  textDark,
+  backgroundDark,
+  tintDark,
   tabIconDefaultDark,
-  iconColorDark,
-  shadowColorDark,
-  primaryButtonColorDark,
-  primaryButtonTextColorDark,
-  secondaryButtonColorDark,
-  secondaryButtonTextColorDark,
+  iconDark,
+  shadowDark,
+  primaryButtonDark,
+  primaryButtonTextDark,
+  secondaryButtonDark,
+  secondaryButtonTextDark,
   glassBackgroundDark,
-  dangerButtonColorDark,
-  dangerButtonTextColorDark,
+  dangerButtonDark,
+  dangerButtonTextDark,
+  headerBackgroundDark,
 };
 
 export const lightColors = {
-  text: textColorLight,
-  background: backgroundColorLight,
-  tint: tintColorLight,
+  text: textLight,
+  background: backgroundLight,
+  tint: tintLight,
   tabIconDefault: tabIconDefaultLight,
-  tabIconSelected: tintColorLight,
-  icon: iconColorLight,
-  shadow: shadowColorLight,
-  primaryButtonColor: primaryButtonColorLight,
-  primaryButtonTextColor: primaryButtonTextColorLight,
-  secondaryButtonColor: secondaryButtonColorLight,
-  secondaryButtonTextColor: secondaryButtonTextColorLight,
-  dangerButtonColor: dangerButtonColorLight,
-  dangerButtonTextColor: dangerButtonTextColorLight,
+  tabIconSelected: tintLight,
+  icon: iconLight,
+  shadow: shadowLight,
+  primaryButton: primaryButtonLight,
+  primaryButtonText: primaryButtonTextLight,
+  secondaryButton: secondaryButtonLight,
+  secondaryButtonText: secondaryButtonTextLight,
+  dangerButton: dangerButtonLight,
+  dangerButtonText: dangerButtonTextLight,
   glassBackground: glassBackgroundLight,
+  headerBackground: headerBackgroundLight,
 };
 
 export const darkColors = {
-  text: textColorDark,
-  background: backgroundColorDark,
-  tint: tintColorDark,
+  text: textDark,
+  background: backgroundDark,
+  tint: tintDark,
   tabIconDefault: tabIconDefaultDark,
-  tabIconSelected: tintColorDark,
-  icon: iconColorDark,
-  shadow: shadowColorDark,
-  primaryButtonColor: primaryButtonColorDark,
-  primaryButtonTextColor: primaryButtonTextColorDark,
-  secondaryButtonColor: secondaryButtonColorDark,
-  secondaryButtonTextColor: secondaryButtonTextColorDark,
-  dangerButtonColor: dangerButtonColorDark,
-  dangerButtonTextColor: dangerButtonTextColorDark,
+  tabIconSelected: tintDark,
+  icon: iconDark,
+  shadow: shadowDark,
+  primaryButton: primaryButtonDark,
+  primaryButtonText: primaryButtonTextDark,
+  secondaryButton: secondaryButtonDark,
+  secondaryButtonText: secondaryButtonTextDark,
+  dangerButton: dangerButtonDark,
+  dangerButtonText: dangerButtonTextDark,
   glassBackground: glassBackgroundDark,
+  headerBackground: headerBackgroundDark,
 };

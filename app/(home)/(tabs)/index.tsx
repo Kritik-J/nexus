@@ -5,13 +5,17 @@ import { router } from "expo-router";
 import { StyledText } from "@/components/styledtext";
 import { Box } from "@/components/box";
 import { HomeDiscussion } from "@/components/discussion";
-import { FlatList } from "react-native";
+import { FlatList, StatusBar } from "react-native";
 
 export const Header = () => {
   const theme = useTheme();
 
   return (
-    <YStack p={10} borderBottomWidth={1} borderColor={"$gray3"}>
+    <YStack
+      p={10}
+      pt={(StatusBar.currentHeight as number) + 10}
+      bg={"$headerBackground"}
+    >
       <XStack justifyContent="space-between" alignItems="center">
         <StyledText
           fontSize={"$2xl"}
@@ -39,7 +43,7 @@ export const Header = () => {
 
 export default function HomeScreen() {
   return (
-    <Box>
+    <YStack>
       <Header />
 
       <FlatList
@@ -47,6 +51,6 @@ export default function HomeScreen() {
         renderItem={({ item, index }) => <HomeDiscussion key={index} />}
         showsVerticalScrollIndicator={false}
       />
-    </Box>
+    </YStack>
   );
 }

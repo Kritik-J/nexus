@@ -14,7 +14,11 @@ export default function TabLayout() {
       screenOptions={{
         tabBarActiveTintColor: theme.colors.tabIconSelected,
         headerShown: false,
-        // tabBarLabel: () => null,
+        tabBarStyle: {
+          height: 50,
+          backgroundColor: theme.colors.headerBackground,
+        },
+        tabBarLabel: () => null,
       }}
     >
       <Tabs.Screen
@@ -43,7 +47,7 @@ export default function TabLayout() {
           title: "Create",
           tabBarLabel: () => null,
           tabBarIcon: ({ color }) => (
-            <Ionicons name="add-circle-outline" color={color} size={32} />
+            <Ionicons name="add-circle-outline" color={color} size={24} />
           ),
         }}
       />
