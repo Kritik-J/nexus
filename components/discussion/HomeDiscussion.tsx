@@ -17,29 +17,27 @@ const HomeDiscussion = () => {
       }}
     >
       <YStack p={10}>
-        <YStack>
-          <XStack justifyContent={"space-between"} alignItems={"center"}>
-            <XStack gap={"$2"}>
-              <StyledText fontSize={"$sm"} color={"$gray11"}>
-                community name
-              </StyledText>
-
-              <StyledText fontSize={"$sm"} color={"$gray11"}>
-                @username
-              </StyledText>
-            </XStack>
+        <XStack justifyContent={"space-between"} alignItems={"center"}>
+          <XStack gap={"$2"}>
+            <StyledText fontSize={"$sm"} color={"$gray11"}>
+              community name
+            </StyledText>
 
             <StyledText fontSize={"$sm"} color={"$gray11"}>
-              2 hours ago
+              @username
             </StyledText>
           </XStack>
 
-          <Spacer size={"$2"} />
+          <StyledText fontSize={"$sm"} color={"$gray11"}>
+            2 hours ago
+          </StyledText>
+        </XStack>
 
-          <StyledText>Discussion Title</StyledText>
+        <Spacer size={"$2"} />
 
-          <Spacer size={"$1"} />
-        </YStack>
+        <StyledText>Discussion Title</StyledText>
+
+        <Spacer size={"$1"} />
       </YStack>
 
       <XStack

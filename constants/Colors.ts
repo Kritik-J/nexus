@@ -11,7 +11,7 @@ const secondaryButtonTextLight = "#fff";
 const glassBackgroundLight = "#ffffff5a";
 const dangerButtonLight = "#F45050";
 const dangerButtonTextLight = "#FFCAC8";
-const headerBackgroundLight = "#eeeeee";
+const headerBackgroundLight = "#fff";
 
 const backgroundDark = "#000";
 const textDark = "#fff";
@@ -26,7 +26,7 @@ const secondaryButtonTextDark = "#000";
 const glassBackgroundDark = "#0000005a";
 const dangerButtonDark = "#F45050";
 const dangerButtonTextDark = "#FFCAC8";
-const headerBackgroundDark = "#171717";
+const headerBackgroundDark = "#000";
 
 export default {
   textLight,

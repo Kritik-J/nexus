@@ -1,21 +1,17 @@
-import { Separator, Spacer, XStack, YStack } from "tamagui";
+import { XStack, YStack } from "tamagui";
 import { Ionicons } from "@expo/vector-icons";
 import useTheme from "@/hooks/useTheme";
 import { router } from "expo-router";
 import { StyledText } from "@/components/styledtext";
 import { Box } from "@/components/box";
 import { HomeDiscussion } from "@/components/discussion";
-import { FlatList, StatusBar } from "react-native";
+import { FlatList } from "react-native";
 
 export const Header = () => {
   const theme = useTheme();
 
   return (
-    <YStack
-      p={10}
-      pt={(StatusBar.currentHeight as number) + 10}
-      bg={"$headerBackground"}
-    >
+    <YStack p={10} bg={"$headerBackground"}>
       <XStack justifyContent="space-between" alignItems="center">
         <StyledText
           fontSize={"$2xl"}
@@ -43,14 +39,13 @@ export const Header = () => {
 
 export default function HomeScreen() {
   return (
-    <YStack>
-      <Header />
-
+    <Box>
       <FlatList
+        ListHeaderComponent={Header}
         data={[1, 2, 3, 4, 5, 6, 7, 8, 9]}
         renderItem={({ item, index }) => <HomeDiscussion key={index} />}
         showsVerticalScrollIndicator={false}
       />
-    </YStack>
+    </Box>
   );
 }
