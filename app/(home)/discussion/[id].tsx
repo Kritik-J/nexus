@@ -8,13 +8,11 @@ import useTheme from "@/hooks/useTheme";
 import { FlatList } from "react-native";
 import { Comment } from "@/components/comment";
 import comments from "@/assets/data/comments";
-import { Input } from "@/components/input";
+import { BaseInput, Input } from "@/components/input";
 import { IconButton } from "@/components/button";
 import { StyledText } from "@/components/styledtext";
 
 const DiscussionScreen = () => {
-  const theme = useTheme();
-
   return (
     <Box>
       <Header title={"Discussion"} />
@@ -34,27 +32,6 @@ const DiscussionScreen = () => {
 };
 
 export default DiscussionScreen;
-
-export const DiscussionFooter = () => {
-  const theme = useTheme();
-
-  return (
-    <YStack p={10} backgroundColor={"$background"}>
-      <XStack ai={"center"} gap={"$2"}>
-        <Ionicons name="camera-outline" size={24} color={theme.colors.icon} />
-
-        <Input
-          placeholder={"Write a reply..."}
-          size={"$4"}
-          borderRadius={50}
-          flex={1}
-        />
-
-        <IconButton icon={<Ionicons name="send" size={16} color={"white"} />} />
-      </XStack>
-    </YStack>
-  );
-};
 
 export const DiscussionInfoHeader = () => {
   const theme = useTheme();
@@ -133,6 +110,27 @@ export const DiscussionInfoHeader = () => {
       <Separator borderBottomColor={"$gray3"} borderBottomWidth={4} />
 
       <Spacer size={10} />
+    </YStack>
+  );
+};
+
+export const DiscussionFooter = () => {
+  const theme = useTheme();
+
+  return (
+    <YStack p={10} backgroundColor={"$background"}>
+      <XStack ai={"center"} gap={"$3"}>
+        <Ionicons name="camera-outline" size={24} color={theme.colors.icon} />
+
+        <BaseInput
+          placeholder={"Write a comment..."}
+          size={"$4"}
+          borderRadius={50}
+          flex={1}
+        />
+
+        <IconButton icon={<Ionicons name="send" size={16} color={"white"} />} />
+      </XStack>
     </YStack>
   );
 };
