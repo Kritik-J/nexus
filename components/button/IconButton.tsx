@@ -19,7 +19,7 @@ export const IconButton = (props: IconButtonProps) => {
       style={[
         styles.container,
         {
-          backgroundColor: theme.colors.primaryButtonColor,
+          backgroundColor: theme.colors.primaryButton,
           width: props.size || 36,
           height: props.size || 36,
           borderRadius: props.size ? props.size / 2 : 18,

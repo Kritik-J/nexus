@@ -64,7 +64,7 @@ export const CommentContainer = (props: CommentProps) => {
               bc={"$gray2"}
               borderTopColor={"$gray7"}
               borderTopWidth={1}
-              borderLeftColor={theme.colors.primaryButtonColor}
+              borderLeftColor={theme.colors.primaryButton}
               borderLeftWidth={4}
             >
               <StyledText fontSize={"$sm"}>

@@ -46,7 +46,7 @@ const HomeDiscussion = () => {
         p={10}
         // borderTopWidth={1}
         borderBottomWidth={1}
-        borderColor={"$gray3"}
+        borderColor={"$gray5"}
         alignItems={"center"}
         justifyContent={"space-between"}
         gap={"$2"}
