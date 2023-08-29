@@ -78,7 +78,7 @@ export const DiscussionOptions = () => {
   const theme = useTheme();
 
   return (
-    <XStack justifyContent={"space-between"} alignItems={"center"}>
+    <XStack justifyContent={"space-between"} alignItems={"center"} px={10}>
       <XStack gap={"$3"}>
         <XStack
           gap={"$2.5"}
