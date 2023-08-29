@@ -2,7 +2,7 @@ import React from "react";
 import { Box } from "@/components/box";
 import { Separator, Spacer, XStack, YStack } from "tamagui";
 import { Header } from "@/components/header";
-import { Ionicons } from "@expo/vector-icons";
+import { AntDesign, Ionicons } from "@expo/vector-icons";
 import { numberToShortString } from "@/utils/transformation";
 import useTheme from "@/hooks/useTheme";
 import { FlatList } from "react-native";
@@ -11,6 +11,7 @@ import comments from "@/assets/data/comments";
 import { BaseInput, Input } from "@/components/input";
 import { IconButton } from "@/components/button";
 import { StyledText } from "@/components/styledtext";
+import { Avatar } from "tamagui";
 
 const DiscussionScreen = () => {
   return (
@@ -39,13 +40,23 @@ export const DiscussionInfoHeader = () => {
   return (
     <YStack>
       <YStack p={10} backgroundColor={"$background"}>
-        <XStack ai={"center"} gap={"$2"}>
-          <StyledText fontSize={"$sm"} color={"$gray12"} fontWeight={"600"}>
+        <XStack gap={"$2"}>
+          <Avatar circular size={"$2"}>
+            <Avatar.Image
+              source={{
+                uri: "https://picsum.photos/200/300",
+              }}
+            />
+
+            <Avatar.Fallback bc={"$gray4"} />
+          </Avatar>
+
+          <StyledText fontSize={"$sm"} color={"$gray11"} fontWeight={"$bold"}>
             @username
           </StyledText>
 
-          <StyledText fontSize={"$sm"} color={"$gray12"}>
-            2 hours ago
+          <StyledText fontSize={"$sm"} color={"$gray11"}>
+            2h
           </StyledText>
         </XStack>
 
@@ -57,57 +68,12 @@ export const DiscussionInfoHeader = () => {
 
         <Spacer size={"$4"} />
 
-        <XStack
-          alignItems={"center"}
-          justifyContent={"space-between"}
-          gap={"$2"}
-        >
-          <XStack alignItems={"center"} gap={"$2"}>
-            {/* <Ionicons name="heart-outline" size={18} color={theme.colors.icon} /> */}
-            <Ionicons name="heart" size={18} color={"red"} />
-
-            <StyledText fontSize={"$sm"}>
-              {numberToShortString(15000)}
-            </StyledText>
-          </XStack>
-
-          <XStack alignItems={"center"} gap={"$2"}>
-            <Ionicons
-              name="chatbubble-ellipses-outline"
-              size={18}
-              color={theme.colors.icon}
-            />
-
-            <StyledText fontSize={"$sm"}>
-              {numberToShortString(25930)}
-            </StyledText>
-          </XStack>
-
-          <XStack alignItems={"center"} gap={"$2"}>
-            <Ionicons
-              name="share-outline"
-              size={18}
-              color={theme.colors.icon}
-            />
-
-            <StyledText fontSize={"$sm"}>Share</StyledText>
-          </XStack>
-
-          <XStack alignItems={"center"} gap={"$2"}>
-            <Ionicons
-              name="bookmark-outline"
-              size={18}
-              color={theme.colors.icon}
-            />
-
-            <StyledText fontSize={"$sm"}>Save</StyledText>
-          </XStack>
-        </XStack>
+        <DiscussionOptions />
       </YStack>
 
       <Spacer size={"$1"} />
 
-      <Separator borderBottomColor={"$gray3"} borderBottomWidth={4} />
+      <Separator borderBottomColor={"$gray4"} borderBottomWidth={"$2"} />
 
       <Spacer size={10} />
     </YStack>
@@ -132,5 +98,51 @@ export const DiscussionFooter = () => {
         <IconButton icon={<Ionicons name="send" size={16} color={"white"} />} />
       </XStack>
     </YStack>
+  );
+};
+
+export const DiscussionOptions = () => {
+  const theme = useTheme();
+
+  return (
+    <XStack justifyContent={"space-between"} alignItems={"center"}>
+      <XStack gap={"$3"}>
+        <XStack
+          gap={"$2.5"}
+          bw={1}
+          borderColor={"$gray4"}
+          py={6}
+          px={10}
+          br={20}
+          alignItems={"center"}
+        >
+          <AntDesign name="like2" size={18} color={theme.colors.icon} />
+
+          <StyledText fontSize={"$sm"}>{numberToShortString(100)}</StyledText>
+
+          <AntDesign name="dislike2" size={18} color={theme.colors.icon} />
+        </XStack>
+
+        <XStack
+          gap={"$2.5"}
+          bw={1}
+          borderColor={"$gray4"}
+          py={6}
+          px={10}
+          br={20}
+          alignItems={"center"}
+        >
+          <Ionicons
+            name="chatbubble-ellipses-outline"
+            size={18}
+            color={theme.colors.icon}
+          />
+
+          <StyledText fontSize={"$sm"}>{numberToShortString(100)}</StyledText>
+        </XStack>
+      </XStack>
+
+      <Ionicons name="share-outline" size={18} color={theme.colors.icon} />
+    </XStack>
   );
 };

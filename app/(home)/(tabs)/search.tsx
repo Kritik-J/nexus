@@ -12,7 +12,7 @@ import communities from "@/assets/data/communities";
 const SearchScreen = () => {
   const theme = useTheme();
 
-  const result = [];
+  const result = [1];
 
   return (
     <Box>

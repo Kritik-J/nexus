@@ -4,7 +4,7 @@ import useTheme from "@/hooks/useTheme";
 import { router } from "expo-router";
 import { StyledText } from "@/components/styledtext";
 import { Box } from "@/components/box";
-import { HomeDiscussion } from "@/components/discussion";
+import { Discussion } from "@/components/discussion";
 import { FlatList } from "react-native";
 
 export const Header = () => {
@@ -43,7 +43,7 @@ export default function HomeScreen() {
       <FlatList
         ListHeaderComponent={Header}
         data={[1, 2, 3, 4, 5, 6, 7, 8, 9]}
-        renderItem={({ item, index }) => <HomeDiscussion key={index} />}
+        renderItem={({ item, index }) => <Discussion key={index} />}
         showsVerticalScrollIndicator={false}
       />
     </Box>

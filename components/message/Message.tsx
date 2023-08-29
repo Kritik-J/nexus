@@ -12,7 +12,7 @@ const Message = () => {
       alignSelf={"flex-start"}
       maxWidth={"80%"}
     >
-      <StyledText>
+      <StyledText fontSize={"$sm"}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
       </StyledText>
 
