@@ -10,11 +10,13 @@ export const ButtonFrame = styled(_Button, {
       true: {
         opacity: 0.75,
         cursor: "not-allowed",
+        disabled: true,
       },
 
       false: {
         opacity: 1,
         cursor: "pointer",
+        disabled: false,
       },
     },
 
