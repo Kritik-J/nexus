@@ -35,6 +35,20 @@
     "experiments": {
       "tsconfigPaths": true,
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "d8d21858-f4a0-4cb5-a529-e9de3b9405de"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/d8d21858-f4a0-4cb5-a529-e9de3b9405de"
     }
   }
 }
