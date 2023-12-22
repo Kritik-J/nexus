@@ -9,7 +9,7 @@ import { Message } from "@/components/message";
 import { FlatList } from "react-native";
 import { BaseInput } from "@/components/input";
 
-const ChatScreen = () => {
+export default function ChatScreen() {
   return (
     <Box>
       <Header title={"@username"} />
@@ -24,9 +24,7 @@ const ChatScreen = () => {
       <MessageInput />
     </Box>
   );
-};
-
-export default ChatScreen;
+}
 
 export const MessageInput = () => {
   const theme = useTheme();

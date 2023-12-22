@@ -8,7 +8,7 @@ import { Ionicons } from "@expo/vector-icons";
 import useTheme from "@/hooks/useTheme";
 import { StyledText } from "@/components/styledtext";
 
-const MessageScreen = () => {
+export default function MessageScreen() {
   const theme = useTheme();
 
   return (
@@ -34,6 +34,4 @@ const MessageScreen = () => {
       />
     </Box>
   );
-};
-
-export default MessageScreen;
+}

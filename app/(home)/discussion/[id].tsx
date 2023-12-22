@@ -13,7 +13,7 @@ import { IconButton } from "@/components/button";
 import { StyledText } from "@/components/styledtext";
 import { Avatar } from "tamagui";
 
-const DiscussionScreen = () => {
+export default function DiscussionScreen() {
   return (
     <Box>
       <Header title={"Discussion"} />
@@ -30,9 +30,7 @@ const DiscussionScreen = () => {
       <DiscussionFooter />
     </Box>
   );
-};
-
-export default DiscussionScreen;
+}
 
 export const DiscussionInfoHeader = () => {
   const theme = useTheme();

@@ -5,12 +5,13 @@ import {
   ThemeProvider,
 } from "@react-navigation/native";
 import { useFonts } from "expo-font";
-import { SplashScreen, Stack, useRouter, useSegments } from "expo-router";
-import { useEffect } from "react";
+import { SplashScreen, Stack } from "expo-router";
+import React, { useEffect } from "react";
 import { useColorScheme } from "react-native";
 import { TamaguiProvider, Theme } from "tamagui";
 
 import config from "../tamagui.config";
+import { AuthProvider } from "@/contexts/auth";
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -53,21 +54,6 @@ export default function RootLayout() {
 
 function RootLayoutNav() {
   const colorScheme = useColorScheme();
-
-  const segments = useSegments();
-  const router = useRouter();
-
-  const isAuth = false;
-
-  useEffect(() => {
-    const inAuthGroup = segments[0] === "(auth)";
-
-    if (!isAuth && !inAuthGroup) {
-    }
-
-    if (isAuth && inAuthGroup) {
-    }
-  }, [isAuth, segments]);
 
   return (
     <TamaguiProvider config={config}>

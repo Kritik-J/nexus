@@ -12,7 +12,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { Searchbar } from "@/components/searchbar";
 import { StyledText } from "@/components/styledtext";
 
-const CommunityScreen = () => {
+export default function CommunityScreen() {
   return (
     <Box>
       <Header title={"Community"} />
@@ -27,9 +27,7 @@ const CommunityScreen = () => {
       />
     </Box>
   );
-};
-
-export default CommunityScreen;
+}
 
 export const CommunityHeader = () => {
   const theme = useTheme();

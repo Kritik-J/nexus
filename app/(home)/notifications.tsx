@@ -4,7 +4,7 @@ import { Header } from "@/components/header";
 import { JoinedNotification } from "@/components/notification";
 import { FlatList } from "react-native";
 
-const NotificationScreen = () => {
+export default function NotificationScreen() {
   return (
     <Box>
       <Header title={"Notifications"} />
@@ -16,6 +16,4 @@ const NotificationScreen = () => {
       />
     </Box>
   );
-};
-
-export default NotificationScreen;
+}

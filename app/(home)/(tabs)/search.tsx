@@ -9,7 +9,7 @@ import { FlatList } from "react-native";
 import { Community } from "@/components/community";
 import communities from "@/assets/data/communities";
 
-const SearchScreen = () => {
+export default function SearchScreen() {
   const theme = useTheme();
 
   const result = [1];
@@ -67,6 +67,4 @@ const SearchScreen = () => {
       )}
     </Box>
   );
-};
-
-export default SearchScreen;
+}

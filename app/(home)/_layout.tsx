@@ -5,7 +5,7 @@ export const unstable_settings = {
   initialRouteName: "(tabs)",
 };
 
-const HomeLayout = () => {
+export default function HomeLayout() {
   return (
     <Stack screenOptions={{ headerShown: false, animation: "none" }}>
       <Stack.Screen name="(tabs)" />
@@ -14,6 +14,4 @@ const HomeLayout = () => {
       <Stack.Screen name="community/[id]" />
     </Stack>
   );
-};
-
-export default HomeLayout;
+}

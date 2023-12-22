@@ -6,7 +6,7 @@ import { SecondaryButton } from "@/components/button";
 import { StyledText } from "@/components/styledtext";
 import Community from "../../../components/community/Community";
 
-const ProfileScreen = () => {
+export default function ProfileScreen() {
   const theme = useTheme();
 
   return (
@@ -58,6 +58,4 @@ const ProfileScreen = () => {
       </YStack>
     </Box>
   );
-};
-
-export default ProfileScreen;
+}
